@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "zap",
+    "title": "Stealth Strategy",
+    "subtitle": "Escrow Secured",
+    "desc": "Operate quietly, deliver loudly."
+  },
+  {
+    "icon": "cpu",
+    "title": "Smart Automation",
+    "subtitle": "Transparent Workflows",
+    "desc": "Workflows enhanced by AI precision."
+  },
+  {
+    "icon": "globe2",
+    "title": "Global Talent",
+    "subtitle": "Top Freelancers, Verified",
+    "desc": "Elite freelancers, worldwide."
+  },
+  {
+    "icon": "eye",
+    "title": "Invisible Support",
+    "subtitle": "",
+    "desc": "Your silent creative force."
+  }
+]

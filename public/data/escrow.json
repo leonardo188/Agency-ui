@@ -1,0 +1,12 @@
+{
+  "steps": [
+    { "label": "Client", "icon": "user" },
+    { "label": "Escrow", "icon": "shieldcheck" },
+    { "label": "Freelancer", "icon": "briefcase" },
+    { "label": "Delivery", "icon": "checkcircle2" }
+  ],
+  "copy": {
+    "client": "Bring your freelancer, we Escrow for you.",
+    "freelancer": "Bring your client, we Escrow for you."
+  }
+}

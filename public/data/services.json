@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "code2",
+    "title": "Web Development",
+    "desc": "High-performance websites built for scalability and conversion."
+  },
+  {
+    "icon": "bot",
+    "title": "Content Automation",
+    "desc": "Automated publishing workflows powered by smart systems."
+  },
+  {
+    "icon": "barchart3",
+    "title": "SEO & Marketing",
+    "desc": "Optimized campaigns to grow visibility and engagement."
+  },
+  {
+    "icon": "palette",
+    "title": "Design & Branding",
+    "desc": "Visual storytelling that elevates your brand identity."
+  },
+  {
+    "icon": "cpu",
+    "title": "AI Automation Systems",
+    "desc": "Integrating AI to streamline business and creative processes."
+  },
+  {
+    "icon": "mic2",
+    "title": "Voiceover & Media Production",
+    "desc": "Audio-visual content production for a modern media presence."
+  }
+]

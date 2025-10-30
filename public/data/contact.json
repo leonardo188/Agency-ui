@@ -1,0 +1,11 @@
+{
+  "headline": "Let’s Talk.",
+  "subtext": "We’d love to hear from you. Reach out anytime.",
+  "address": "123 Phantom St, Melbourne",
+  "email": "hello@nebulastudio.fake",
+  "socials": [
+    { "name": "Instagram", "url": "https://instagram.com/moderncontenthub" },
+    { "name": "Twitter", "url": "https://twitter.com" },
+    { "name": "LinkedIn", "url": "https://linkedin.com" }
+  ]
+}

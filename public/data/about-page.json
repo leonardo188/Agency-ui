@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "headline": "Built by creators, for creators.",
+    "subtext": "We’re a forward-thinking studio dedicated to blending creativity and technology into scalable digital solutions."
+  },
+  "mission": "At Nebula Studio, we believe the future belongs to bold creators who merge art and innovation. Every pixel, every line of code, every idea is crafted to make an impact.",
+  "team": [
+    { "name": "Evelyn Cross", "role": "Creative Director", "quote": "Design is storytelling.", "photo": "https://randomuser.me/api/portraits/women/44.jpg" },
+    { "name": "Raj Patel", "role": "Lead Developer", "quote": "Logic + imagination = solutions.", "photo": "https://randomuser.me/api/portraits/men/33.jpg" },
+    { "name": "Sofia Alvarez", "role": "UX Strategist", "quote": "Empathy drives design.", "photo": "https://randomuser.me/api/portraits/women/68.jpg" },
+    { "name": "Marcus Reed", "role": "Automation Specialist", "quote": "Smarter systems, stronger impact.", "photo": "https://randomuser.me/api/portraits/men/48.jpg" },
+    { "name": "Hana Kim", "role": "Content Architect", "quote": "Words that move brands.", "photo": "https://randomuser.me/api/portraits/women/24.jpg" },
+    { "name": "Lucas Meyer", "role": "Growth Consultant", "quote": "Scale is a mindset.", "photo": "https://randomuser.me/api/portraits/men/14.jpg" }
+  ],
+  "values": [
+    { "icon": "sparkles", "title": "Innovation", "desc": "We challenge the norm through creativity and experimentation." },
+    { "icon": "eye", "title": "Transparency", "desc": "We value clear communication and open processes." },
+    { "icon": "shield", "title": "Stealth", "desc": "Your projects, your privacy — protected with care." },
+    { "icon": "target", "title": "Impact", "desc": "We focus on measurable, meaningful results." }
+  ],
+  "cta": {
+    "text": "Work with the Nebula Collective.",
+    "button": { "label": "Start a Project", "link": "/api/contact/start" }
+  }
+}
