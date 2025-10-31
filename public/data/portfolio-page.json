@@ -2,36 +2,67 @@
   "hero": {
     "headline": "Our Work Speaks",
     "subtext": "Explore the projects we’ve crafted for brands worldwide.",
-    "cta": { "label": "View Case Studies", "link": "/api/contact/start" }
+    "cta": { "label": "Start Your Project", "link": "/contact" }
   },
   "filters": ["Branding", "Web", "AI", "Marketing"],
   "projects": [
-    { "title": "Nova Apparel", "category": "Branding", "image": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb" },
-    { "title": "Zenith Finance", "category": "Web", "image": "https://images.unsplash.com/photo-1556767576-cfba9fded1e6" },
-    { "title": "Pulse AI", "category": "AI", "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d" },
-    { "title": "Glow Studio", "category": "Marketing", "image": "https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5" },
-    { "title": "Stride Logistics", "category": "Branding", "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c" },
-    { "title": "Echo Media", "category": "Marketing", "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f" }
+    {
+      "title": "Nova Apparel – Fashion Rebrand",
+      "slug": "nova-apparel",
+      "category": "Branding",
+      "image": "https://picsum.photos/800",
+      "desc": "We transformed Nova Apparel’s digital identity with a fresh branding system, sleek website, and optimized content strategy."
+    },
+    {
+      "title": "Zenith Finance – Fintech Landing",
+      "slug": "zenith-finance",
+      "category": "Web",
+      "image": "https://picsum.photos/801",
+      "desc": "Created a modern fintech landing page for Zenith Finance with conversion-driven design and smooth animations."
+    },
+    {
+      "title": "Pulse AI – Automation Workflow",
+      "slug": "pulse-ai",
+      "category": "AI",
+      "image": "https://picsum.photos/802",
+      "desc": "Built Pulse AI’s automation dashboard to streamline workflow and data analytics for enterprise clients."
+    },
+     {
+      "title": "Nova Apparel – Fashion Rebrand",
+      "slug": "nova-apparel",
+      "category": "Branding",
+      "image": "https://picsum.photos/807",
+      "desc": "We transformed Nova Apparel’s digital identity with a fresh branding system, sleek website, and optimized content strategy."
+    },
+    {
+      "title": "Zenith Finance – Fintech Landing",
+      "slug": "zenith-finance",
+      "category": "Web",
+      "image": "https://picsum.photos/808",
+      "desc": "Created a modern fintech landing page for Zenith Finance with conversion-driven design and smooth animations."
+    },
+    {
+      "title": "Pulse AI – Automation Workflow",
+      "slug": "pulse-ai",
+      "category": "AI",
+      "image": "https://picsum.photos/809",
+      "desc": "Built Pulse AI’s automation dashboard to streamline workflow and data analytics for enterprise clients."
+    }
   ],
   "caseStudies": [
     {
       "title": "Luma Health – From Startup to Scale",
-      "desc": "Scalable brand + AI content strategy.",
-      "image": "https://images.unsplash.com/photo-1573497019563-e8b3b2f4a19a"
+      "image": "https://picsum.photos/1000",
+      "desc": "Developed a scalable brand + AI content strategy to position Luma Health as a growth-focused healthtech startup."
     },
     {
       "title": "OrbitPay – Accelerating Fintech",
-      "desc": "UI/UX overhaul, 3x engagement.",
-      "image": "https://images.unsplash.com/photo-1507209696998-3c532be9b2b4"
-    },
-    {
-      "title": "AeroVision – Next-Gen Marketing",
-      "desc": "Automation reduced overhead 40%.",
-      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+      "image": "https://picsum.photos/1001",
+      "desc": "Revamped UX and launched 3x engagement in 6 months through data-driven redesign."
     }
   ],
   "cta": {
     "text": "Your project could be next.",
-    "button": { "label": "Let’s Build Together", "link": "/api/contact/start" }
+    "button": { "label": "Let’s Build Together", "link": "/contact" }
   }
 }

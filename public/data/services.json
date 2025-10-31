@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "headline": "What We Do",
+    "subtext": "We deliver creative and automation solutions that help brands move faster, scale smarter, and look premium."
+  },
+  "services": [
+    {
+      "title": "Branding & Visual Identity",
+      "slug": "branding-visual-identity",
+      "icon": "fa-solid fa-palette",
+      "shortDesc": "Build a memorable brand with strong visuals and cohesive design systems.",
+      "image": "/assets/services/branding.jpg",
+      "detail": "<p>Our branding process starts with deep research and positioning. From color psychology to typography, we craft a complete brand story that resonates with your audience.</p><ul><li>Logo design & color system</li><li>Brand guidelines</li><li>Marketing collaterals</li></ul>"
+    },
+    {
+      "title": "Web Development",
+      "slug": "web-development",
+      "icon": "fa-solid fa-code",
+      "shortDesc": "Modern, fast, and scalable websites that convert and perform.",
+      "image": "/assets/services/webdev.jpg",
+      "detail": "<p>We develop high-performance websites using modern frameworks like React, Vue, and Nuxt. Each site is optimized for SEO, responsiveness, and speed.</p><ul><li>Landing pages & corporate sites</li><li>E-commerce solutions</li><li>Custom dashboards</li></ul>"
+    },
+    {
+      "title": "UI/UX Design",
+      "slug": "ui-ux-design",
+      "icon": "fa-solid fa-pen-ruler",
+      "shortDesc": "Design experiences that are not only beautiful but intuitive and data-driven.",
+      "image": "/assets/services/uiux.jpg",
+      "detail": "<p>Our UI/UX process focuses on user empathy, information architecture, and visual storytelling. We turn ideas into interactive prototypes and polished interfaces.</p><ul><li>User research & wireframing</li><li>Prototyping & testing</li><li>High-fidelity design</li></ul>"
+    },
+    {
+      "title": "AI-Powered Automation",
+      "slug": "ai-powered-automation",
+      "icon": "fa-solid fa-robot",
+      "shortDesc": "Streamline workflows with smart AI integrations and automations.",
+      "image": "/assets/services/ai.jpg",
+      "detail": "<p>We build custom automation pipelines to reduce manual work and enhance accuracy — connecting your tools through intelligent triggers.</p><ul><li>Process automation</li><li>AI chatbot integration</li><li>Workflow optimization</li></ul>"
+    },
+    {
+      "title": "Content Production",
+      "slug": "content-production",
+      "icon": "fa-solid fa-video",
+      "shortDesc": "Engaging visual and written content that drives audience connection.",
+      "image": "/assets/services/content.jpg",
+      "detail": "<p>From script to screen, we produce compelling content that builds brand awareness. Our creative team manages video, photography, and copywriting in-house.</p><ul><li>Video & photo production</li><li>Copywriting & storytelling</li><li>Social media content</li></ul>"
+    },
+    {
+      "title": "SEO & Marketing Strategy",
+      "slug": "seo-marketing-strategy",
+      "icon": "fa-solid fa-chart-line",
+      "shortDesc": "Data-driven marketing strategies that scale your brand visibility.",
+      "image": "/assets/services/seo.jpg",
+      "detail": "<p>We help you rank higher and reach the right audience through on-page SEO, analytics, and campaign strategy.</p><ul><li>SEO audits & optimization</li><li>Ad campaign planning</li><li>Performance tracking</li></ul>"
+    }
+  ]
+}

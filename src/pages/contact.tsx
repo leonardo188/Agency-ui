@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion, easeOut } from "framer-motion"
 import { useState, useEffect } from "react"
 import { useMockApi } from "../hooks/useMockApi"
 import { usePageSEO } from "../hooks/usePageSEO"
@@ -9,11 +9,21 @@ interface ContactField {
   label: string
   type: string
 }
+
 interface ContactData {
   headline: string
   description: string
   formFields: ContactField[]
-  socials: { label: string; url: string }[]
+  socials: { icon: string; url: string }[]
+}
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: easeOut },
+  },
 }
 
 export default function ContactPage() {
@@ -30,7 +40,9 @@ export default function ContactPage() {
     load()
   }, [])
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
@@ -44,22 +56,38 @@ export default function ContactPage() {
 
   return (
     <DefaultLayout title="Contact" description={data.description}>
-      <section className="py-24 bg-background">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl font-display font-semibold text-secondary mb-4"
-          >
-            {data.headline}
-          </motion.h1>
-          <p className="text-secondary mb-10">{data.description}</p>
+      <section className="relative py-32 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#2563EB_0%,#3D5AFE_50%,#60A5FA_100%)] opacity-90 animate-gradient-move" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_20%,rgba(167,139,250,0.25),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_80%,rgba(0,255,198,0.15),transparent_70%)]" />
 
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          className="relative z-10 px-6"
+        >
+          <h1 className="text-5xl md:text-6xl font-display font-semibold text-white drop-shadow-[0_2px_18px_rgba(61,90,254,0.35)]">
+            {data.headline}
+          </h1>
+          <p className="text-white/80 text-lg mt-6 max-w-3xl mx-auto">
+            {data.description}
+          </p>
+        </motion.div>
+      </section>
+
+      <section className="py-24 bg-background relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(61,90,254,0.08),transparent_80%)] pointer-events-none" />
+
+        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           {!submitted ? (
-            <form
+            <motion.form
               onSubmit={handleSubmit}
-              className="bg-white rounded-2xl shadow-md p-10 border border-border max-w-2xl mx-auto"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="bg-white/80 backdrop-blur-md rounded-2xl shadow-soft border border-border p-10 max-w-2xl mx-auto"
             >
               {data.formFields.map((field, i) => (
                 <div key={i} className="mb-6 text-left">
@@ -75,8 +103,8 @@ export default function ContactPage() {
                       name={field.name}
                       required
                       onChange={handleChange}
-                      className="w-full border border-border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"
                       rows={4}
+                      className="w-full border border-border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary bg-surface"
                     />
                   ) : (
                     <input
@@ -85,7 +113,7 @@ export default function ContactPage() {
                       type={field.type}
                       required
                       onChange={handleChange}
-                      className="w-full border border-border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full border border-border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary bg-surface"
                     />
                   )}
                 </div>
@@ -95,11 +123,11 @@ export default function ContactPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="px-8 py-3 rounded-full bg-primary text-white font-semibold shadow-md hover:shadow-lg transition-all"
+                className="w-full py-3 rounded-full bg-gradient-accent text-white font-semibold shadow-glow hover:shadow-xl transition-all mt-4"
               >
                 Send Message
               </motion.button>
-            </form>
+            </motion.form>
           ) : (
             <motion.div
               initial={{ opacity: 0 }}
@@ -115,21 +143,49 @@ export default function ContactPage() {
             </motion.div>
           )}
 
-          <div className="mt-16 flex justify-center gap-8">
+          <div className="mt-16 flex justify-center flex-wrap gap-8">
             {data.socials.map((s, i) => (
               <motion.a
                 key={i}
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-primary hover:text-secondary font-medium"
+                whileHover={{
+                  scale: 1.2,
+                  color: "#3D5AFE",
+                  textShadow: "0 0 12px rgba(61,90,254,0.6)",
+                }}
+                className="text-secondary text-2xl transition-all"
               >
-                {s.label}
+                <i className={s.icon}></i>
               </motion.a>
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="py-24 text-center text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-accent animate-gradient-move opacity-90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.15),transparent_70%)]" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-semibold mb-6">
+            Let’s create something amazing together.
+          </h2>
+          <motion.a
+            href="#"
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 rounded-full bg-white text-primary font-semibold shadow-md hover:shadow-glow transition-all"
+          >
+            Start a Project
+          </motion.a>
+        </motion.div>
       </section>
     </DefaultLayout>
   )

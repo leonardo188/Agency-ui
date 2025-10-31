@@ -73,12 +73,12 @@ export const siteConfig = {
 
   // SOCIALS
   socials: [
-   { name: "LinkedIn", url: "https://linkedin.com/company/nebulaagency" },
-    { name: "Facebook", url: "https://facebook.com/@nebulaagency" },
-    { name: "X (Twitter)", url: "https://x.com/nebulaagency" },
-    { name: "Instagram", url: "https://instagram.com/nebulaagency" },
-    { name: "YouTube", url: "https://youtube.com/@nebulaagency" },
-    { name: "Tiktok", url: "https://tiktok.com/@nebulaagency" },
+    { icon: "fa-brands fa-linkedin-in", url: "https://linkedin.com" },
+    { icon: "fa-brands fa-facebook-f", url: "https://facebook.com" },
+    { icon: "fa-brands fa-x-twitter", url: "https://twitter.com" },
+    { icon: "fa-brands fa-instagram", url: "https://instagram.com/moderncontenthub" },
+    { icon: "fa-brands fa-youtube", url: "https://youtube.com" },
+    { icon: "fa-brands fa-tiktok", url: "https://tiktok.com" }
   ],
 
   // SEO

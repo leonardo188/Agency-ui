@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "headline": "Insights & Updates.",
+    "subtext": "Fresh thoughts from our creative studio — design, strategy, and technology."
+  },
+  "posts": [
+    {
+      "title": "Designing for Emotion: How Subtle Interactions Drive Engagement",
+      "slug": "designing-for-emotion",
+      "category": "Design",
+      "date": "October 28, 2025",
+      "image": "https://picsum.photos/822",
+      "excerpt": "Discover how micro-interactions and subtle motion design can deeply influence user perception and engagement.",
+      "content": "<p>In today’s digital landscape, emotional design plays a crucial role in how users connect with a product...</p><p>Micro-interactions are those subtle animations or feedback loops that make users feel alive within your interface...</p><p>From hover glows to motion easing — every pixel movement should tell a story.</p>"
+    },
+    {
+      "title": "The Rise of AI in Branding: What Creative Teams Should Know",
+      "slug": "ai-in-branding",
+      "category": "AI & Strategy",
+      "date": "October 15, 2025",
+      "image": "https://picsum.photos/823",
+      "excerpt": "AI is transforming branding — from content creation to predictive design systems. Here’s how your creative team can adapt.",
+      "content": "<p>Artificial Intelligence is no longer a buzzword — it’s a creative partner. Brands now leverage AI tools to generate content, logos, and even moodboards...</p><p>But with great power comes great responsibility — authenticity and strategy still matter most.</p>"
+    },
+    {
+      "title": "Why Minimalism Still Wins in 2025",
+      "slug": "minimalism-still-wins",
+      "category": "Trends",
+      "date": "September 22, 2025",
+      "image": "https://picsum.photos/824",
+      "excerpt": "As flashy interfaces fade, minimalism continues to dominate. Here’s why less design often means more impact.",
+      "content": "<p>Minimalism is not about removing features — it’s about removing distractions. Simplicity enhances clarity and performance...</p><p>Design systems in 2025 emphasize whitespace, contrast, and typography as emotional tools rather than decoration.</p>"
+    },
+    {
+      "title": "Designing for Emotion: How Subtle Interactions Drive Engagement",
+      "slug": "designing-for-emotion",
+      "category": "Design",
+      "date": "October 28, 2025",
+      "image": "https://picsum.photos/825",
+      "excerpt": "Discover how micro-interactions and subtle motion design can deeply influence user perception and engagement.",
+      "content": "<p>In today’s digital landscape, emotional design plays a crucial role in how users connect with a product...</p><p>Micro-interactions are those subtle animations or feedback loops that make users feel alive within your interface...</p><p>From hover glows to motion easing — every pixel movement should tell a story.</p>"
+    },
+    {
+      "title": "The Rise of AI in Branding: What Creative Teams Should Know",
+      "slug": "ai-in-branding",
+      "category": "AI & Strategy",
+      "date": "October 15, 2025",
+      "image": "https://picsum.photos/826",
+      "excerpt": "AI is transforming branding — from content creation to predictive design systems. Here’s how your creative team can adapt.",
+      "content": "<p>Artificial Intelligence is no longer a buzzword — it’s a creative partner. Brands now leverage AI tools to generate content, logos, and even moodboards...</p><p>But with great power comes great responsibility — authenticity and strategy still matter most.</p>"
+    },
+    {
+      "title": "Why Minimalism Still Wins in 2025",
+      "slug": "minimalism-still-wins",
+      "category": "Trends",
+      "date": "September 22, 2025",
+      "image": "https://picsum.photos/827",
+      "excerpt": "As flashy interfaces fade, minimalism continues to dominate. Here’s why less design often means more impact.",
+      "content": "<p>Minimalism is not about removing features — it’s about removing distractions. Simplicity enhances clarity and performance...</p><p>Design systems in 2025 emphasize whitespace, contrast, and typography as emotional tools rather than decoration.</p>"
+    }
+  ]
+}

@@ -1,42 +1,46 @@
 @import "tailwindcss";
 
-/* === 🎨 CUSTOM THEME VARIABLES — AGENCY LIGHT MODE === */
+/* === 🎨 CUSTOM THEME VARIABLES — PREMIUM AGENCY LIGHT MODE === */
 @theme {
-  /* === 🎨 Color System (Based on Agency UI.txt) === */
-  --color-primary: #4A6CF7;        /* Vivid Indigo – CTAs, Accents */
-  --color-secondary: #2E3A59;      /* Deep Charcoal – Headers */
-  --color-background: #F9FAFB;     /* Cloud White – Base */
-  --color-surface: #FFFFFF;        /* Cards / Modals */
-  --color-hover-bg: #EEF2FF;       /* Soft Periwinkle */
-  --color-border: #E5E7EB;         /* Dividers */
-  --color-text-primary: #111827;   /* Main Text */
-  --color-text-secondary: #6B7280; /* Subtext */
-  --color-success: #22C55E;
-  --color-warning: #FACC15;
-  --color-error: #F43F5E;
+  /* === Base Color System === */
+  --color-primary: #3D5AFE;         /* Electric Indigo – CTA, links */
+  --color-secondary: #1E293B;       /* Deep Navy – titles / headings */
+  --color-background: #F5F7FF;      /* Cool White – background (slightly blue tint) */
+  --color-surface: #FFFFFF;         /* Pure white – cards/modals */
+  --color-hover-bg: #EEF2FF;        /* Soft Periwinkle – hover base */
+  --color-border: #E2E8F0;          /* Subtle divider (blue-gray) */
+  --color-text-primary: #1E293B;    /* Navy Charcoal – for body text */
+  --color-text-secondary: #64748B;  /* Muted Slate – subtext */
+  --color-success: #16A34A;         /* Emerald */
+  --color-warning: #EAB308;         /* Amber */
+  --color-error: #EF4444;           /* Coral Red */
 
-  /* Accent Palette (Chromatix-like) */
-  --color-electric-blue: #005CFF;
-  --color-neon-green: #00FFA3;
-  --color-soft-violet: #A07CFF;
+  /* === Accent Spectrum (Chromatix/Outbustech Style) === */
+  --color-electric-blue: #2563EB;   /* Vivid Blue – highlight */
+  --color-sky-blue: #60A5FA;        /* Accent gradient mid */
+  --color-soft-violet: #A78BFA;     /* Soft purple-blue – depth accent */
+  --color-neon-green: #00FFC6;      /* Subtle glow accent (used rarely) */
 
-  /* Gradient */
-  --color-gradient-accent: linear-gradient(90deg, #4A6CF7, #A07CFF);
+  /* === Gradients === */
+  --color-gradient-accent: linear-gradient(90deg, #3D5AFE 0%, #60A5FA 50%, #A78BFA 100%);
+  --color-gradient-hero: linear-gradient(180deg, #F9FBFF 0%, #E7EDFF 60%, #DEE6FF 100%);
+  --color-gradient-cta: linear-gradient(90deg, #2563EB 0%, #00FFC6 100%);
 
-  /* 🌈 Shadows */
-  --shadow-glow: 0 0 12px rgba(74, 108, 247, 0.4);
+  /* === Shadows === */
+  --shadow-glow: 0 0 20px rgba(61, 90, 254, 0.25);
+  --shadow-soft: 0 6px 25px rgba(30, 41, 59, 0.05);
 
-  /* 🖋 Typography */
+  /* === Typography === */
   --font-sans: "Inter", system-ui, sans-serif;
   --font-display: "Space Grotesk", "Inter", sans-serif;
   --font-mono: "Geist Mono", monospace;
 
-  /* 🧱 Breakpoints */
+  /* === Breakpoints === */
   --breakpoint-xs: 480px;
   --breakpoint-3xl: 1920px;
 }
 
-/* === 🧩 KEYFRAMES === */
+/* === ⚡ KEYFRAMES === */
 @keyframes marquee-horizontal {
   from { transform: translateX(0); }
   to { transform: translateX(calc(-100% - var(--gap))); }
@@ -47,7 +51,7 @@
   to { transform: translateY(calc(-100% - var(--gap))); }
 }
 
-/* === ⚡ UTILITIES === */
+/* === ✨ UTILITIES === */
 @layer utilities {
   .animate-marquee-horizontal {
     animation: marquee-horizontal var(--duration, 20s) linear infinite;
@@ -78,7 +82,8 @@
     100% { background-position: 0% 50%; }
   }
   .animate-gradient-move {
-    animation: gradientMove 6s ease infinite;
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
   }
 
   @keyframes floatPulse {
@@ -97,26 +102,16 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
     transform: translateX(-100%);
     transition: all 0.8s;
   }
   .group:hover .hover-glow::after {
     animation: sweep 1.2s linear;
   }
-
-  .animate-gradient-move {
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
-  }
-  @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
 }
 
-/* === 📦 BASE STYLES === */
+/* === 🌐 BASE STYLES === */
 @layer base {
   html, body {
     @apply font-sans bg-[var(--color-background)] text-[var(--color-text-primary)];
