@@ -26,22 +26,24 @@ export default function Hero() {
   if (!hero) return null
 
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-background">
-      <iframe
-        className="absolute inset-0 w-full h-full object-cover"
-        src={hero.videoUrl}
-        title="Hero Background"
-        allow="autoplay; fullscreen"
-      />
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-background">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <iframe
+          src={hero.videoUrl}
+          title="Hero Background"
+          allow="autoplay; fullscreen"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
 
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.55)_0%,rgba(245,247,255,0.75)_50%,rgba(255,255,255,0.9)_100%)] backdrop-blur-[3px]" />
 
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-3xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-display text-4xl md:text-6xl font-semibold text-secondary leading-tight"
+          className="font-display text-3xl sm:text-4xl md:text-6xl font-semibold text-secondary leading-tight"
         >
           {hero.headline.split("Digital")[0]}
           <span className="bg-linear-to-r from-primary to-soft-violet bg-clip-text text-transparent">
@@ -54,13 +56,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-text-secondary mt-6 text-lg md:text-xl leading-relaxed"
+          className="text-text-secondary mt-5 sm:mt-6 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
         >
           {hero.subheadline}
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10"
           initial="hidden"
           animate="visible"
           variants={{
@@ -74,13 +76,14 @@ export default function Hero() {
             }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 0 15px rgba(74,108,247,0.5)",
+              boxShadow: "0 0 18px rgba(74,108,247,0.6)",
             }}
             whileTap={{ scale: 0.95 }}
+            className="w-full sm:w-auto"
           >
             <Link
               to={hero.ctaPrimary.link}
-              className="px-8 py-3 rounded-full bg-primary text-white font-semibold shadow-glow transition-all"
+              className="block w-full sm:w-auto px-8 py-3 rounded-full bg-primary text-white font-semibold shadow-glow hover:shadow-xl transition-all text-center"
             >
               {hero.ctaPrimary.label}
             </Link>
@@ -93,13 +96,14 @@ export default function Hero() {
             }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 0 15px rgba(160,124,255,0.4)",
+              boxShadow: "0 0 15px rgba(160,124,255,0.5)",
             }}
             whileTap={{ scale: 0.95 }}
+            className="w-full sm:w-auto"
           >
             <Link
               to={hero.ctaSecondary.link}
-              className="px-8 py-3 rounded-full border border-primary text-primary font-semibold bg-white hover:bg-hover-bg transition-all"
+              className="block w-full sm:w-auto px-8 py-3 rounded-full border border-primary text-primary font-semibold bg-white hover:bg-hover-bg transition-all text-center"
             >
               {hero.ctaSecondary.label}
             </Link>

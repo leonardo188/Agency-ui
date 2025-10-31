@@ -46,48 +46,57 @@ export default function EscrowWorkflow() {
           Escrow Workflow
         </motion.h2>
 
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-16">
+        <div className="relative flex flex-col md:flex-row items-center justify-center gap-16 md:gap-10">
           <motion.div
-            className="hidden md:block absolute top-1/2 left-0 w-full h-[3px] bg-linear-to-r from-white via-white/60 to-transparent"
+            className="hidden md:block absolute top-1/2 left-0 w-full h-[3px] bg-linear-to-r from-white via-white/70 to-transparent"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            style={{ transformOrigin: "left" }}
+            transition={{ duration: 1.4, ease: 'easeOut' }}
+            style={{ transformOrigin: 'left center' }}
+          />
+
+          <motion.div
+            className="block md:hidden absolute top-0 left-1/2 w-[3px] h-full bg-linear-to-b from-white via-white/70 to-transparent"
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            transition={{ duration: 1.4, ease: 'easeOut' }}
+            style={{ transformOrigin: 'top center' }}
           />
 
           {data.steps.map((step, i) => (
             <motion.div
               key={i}
-              className="relative flex flex-col items-center"
+              className="relative flex flex-col items-center z-10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.3, duration: 0.6 }}
+              transition={{ delay: i * 0.25, duration: 0.6 }}
             >
               <motion.div
-                className="relative flex items-center justify-center w-24 h-24 rounded-full border border-white/50 bg-white/10 backdrop-blur-sm text-white"
+                className="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-white/50 bg-white/10 backdrop-blur-sm"
                 initial={{ opacity: 0.5, scale: 0.9 }}
                 whileInView={{
                   opacity: 1,
                   scale: 1,
-                  boxShadow: "0 0 20px rgba(255,255,255,0.4)",
+                  boxShadow: '0 0 20px rgba(255,255,255,0.4)',
                 }}
                 transition={{ delay: i * 0.3 + 0.3, duration: 0.6 }}
                 whileHover={{
                   scale: 1.08,
-                  boxShadow: "0 0 25px rgba(255,255,255,0.6)",
+                  boxShadow: '0 0 25px rgba(255,255,255,0.6)',
                 }}
               >
                 {iconMap[step.icon]}
+
                 <motion.span
                   className="absolute inset-0 rounded-full border-2 border-white/30"
                   initial={{ opacity: 0 }}
                   whileInView={{
-                    opacity: [0.2, 0.6, 0],
+                    opacity: [0.3, 0.7, 0],
                     scale: [1, 1.4, 1],
                   }}
                   transition={{
                     delay: i * 0.4,
-                    duration: 2.2,
+                    duration: 2.4,
                     repeat: Infinity,
                     repeatDelay: 2,
                   }}
