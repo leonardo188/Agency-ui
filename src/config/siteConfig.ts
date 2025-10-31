@@ -46,14 +46,19 @@ export const siteConfig = {
   // ENDPOINTS
  endpoints: {
     mock: {
-      hero: "/data/hero.json",
-      about: "/data/about.json",
-      services: "/data/services.json",
-      escrow: "/data/escrow.json",
-      portfolio: "/data/portfolio.json",
-      whychoose: "/data/whychoose.json",
-      testimonials: "/data/testimonials.json",
-      cta: "/data/cta.json",
+      // HOME SECTION DATA
+      hero: "/data/Home/hero.json",
+      about: "/data/Home/about.json",
+      services: "/data/Home/services.json",
+      escrow: "/data/Home/escrow.json",
+      portfolio: "/data/Home/portfolio.json",
+      whychoose: "/data/Home/whychoose.json",
+      testimonials: "/data/Home/testimonials.json",
+      cta: "/data/Home/cta.json",
+
+      // OTHER PAGES
+      portfolioPage: "/data/portfolio-page.json",
+      workwithusPage: "/data/workwithus-page.json",
       contact: "/data/contact.json",
       aboutPage: "/data/about-page.json",
     },

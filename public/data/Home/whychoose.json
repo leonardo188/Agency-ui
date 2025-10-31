@@ -1,0 +1,12 @@
+{
+  "stats": [
+    { "value": 800, "label": "Projects Delivered", "suffix": "+" },
+    { "value": 50, "label": "Freelancers", "suffix": "+" },
+    { "value": 98.5, "label": "Satisfaction", "suffix": "%" }
+  ],
+  "partners": [
+    "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "headline": "Join Our Global Network of Creators",
+    "subheadline": "Work on exciting projects with flexible opportunities."
+  },
+  "benefits": [
+    "Flexible Work",
+    "Global Clients",
+    "Cutting-Edge Tools",
+    "Supportive Team"
+  ],
+  "faqs": [
+    { "q": "How does the process work?", "a": "You’ll submit your profile, and our team will match you to suitable projects within 48 hours." },
+    { "q": "What skills are you looking for?", "a": "We welcome designers, developers, strategists, and automation engineers." },
+    { "q": "When will I hear back?", "a": "Usually within a week depending on openings." },
+    { "q": "Do I need to be full-time?", "a": "No — work flexibly based on your availability and interest." }
+  ],
+  "cta": {
+    "text": "Your next big opportunity starts here.",
+    "button": { "label": "Apply Today" }
+  }
+}

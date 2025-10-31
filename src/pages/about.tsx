@@ -20,6 +20,7 @@ export default function AboutPage() {
   useEffect(() => {
     const load = async () => {
       const res = await useMockApi("/data/about-page.json")
+      console.log('About Page Data:', res);
       setData(res)
     }
     load()
@@ -29,21 +30,27 @@ export default function AboutPage() {
 
   return (
     <DefaultLayout title="About Nebula" description={data.hero.subtext}>
-      <section className="relative py-32 text-center bg-surface overflow-hidden">
+        <section className="relative py-32 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-b from-[#fefeff] via-[#eaf0ff] to-[#dfe4ff]" />
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(120,180,255,0.4),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(200,160,255,0.25),transparent_70%)]" />
+
+        {/* Content */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 px-6 max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative z-10 px-6"
         >
-          <h1 className="text-4xl md:text-6xl font-display font-semibold bg-linear-to-r from-primary to-(--color-accent-purple) bg-clip-text text-transparent">
-            {data.hero.headline}
+          <h1 className="text-5xl md:text-6xl font-display font-semibold bg-linear-to-r from-electric-blue via-[#6A82FB] to-soft-violet bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(100,120,255,0.25)]">
+            Built by creators, for creators.
           </h1>
-          <p className="text-text-secondary mt-6 text-lg md:text-xl">
-            {data.hero.subtext}
+          <p className="text-lg md:text-xl mt-6 text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We’re a forward-thinking studio dedicated to blending creativity and technology
+            into scalable digital solutions.
           </p>
         </motion.div>
-        <div className="absolute inset-0 bg-linear-to-b from-transparent to-[rgba(0,92,255,0.1)] animate-gradient-move" />
       </section>
 
       <section className="py-24 text-center bg-background">
@@ -62,20 +69,28 @@ export default function AboutPage() {
           Meet the Team
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
-          {data.team.map((m: any, i: number) => (
+          {data.team.map((member: any, i: number) => (
             <motion.div
               key={i}
-              whileHover={{ rotateY: 180 }}
-              transition={{ duration: 0.6 }}
-              className="group relative bg-white shadow-md rounded-2xl overflow-hidden cursor-pointer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              className="relative bg-white shadow-md rounded-2xl overflow-hidden group border border-gray-100 hover:shadow-xl transition-all"
             >
-              <div className="absolute inset-0 flex flex-col items-center justify-center backface-hidden group-hover:opacity-0 transition-opacity duration-300">
-                <img src={m.photo} alt={m.name} className="w-32 h-32 rounded-full mt-6 object-cover" />
-                <h3 className="mt-4 font-semibold text-secondary">{m.name}</h3>
-                <p className="text-text-secondary">{m.role}</p>
+              <img
+                src={member.photo}
+                alt={member.name}
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6 text-center">
+                <h3 className="font-semibold text-lg text-secondary">
+                  {member.name}
+                </h3>
+                <p className="text-text-secondary">{member.role}</p>
               </div>
-              <div className="absolute inset-0 bg-primary text-white flex items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
-                <p className="italic">“{m.quote}”</p>
+
+              <div className="absolute inset-0 flex flex-col justify-center items-center bg-electric-blue/80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="italic text-center px-6">“{member.quote}”</p>
               </div>
             </motion.div>
           ))}

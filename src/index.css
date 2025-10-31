@@ -104,6 +104,16 @@
   .group:hover .hover-glow::after {
     animation: sweep 1.2s linear;
   }
+
+  .animate-gradient-move {
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  }
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 }
 
 /* === 📦 BASE STYLES === */
